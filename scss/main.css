@@ -1,0 +1,140 @@
+@font-face {
+  font-family: 'Lato';
+  src: local("Lato-Light");
+  src: url(../assets/fonts/Lato/Lato-Light.ttf);
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: local("Lato-Regular");
+  src: url(../assets/fonts/Lato/Lato-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: local("Lato-Bold");
+  src: url(../assets/fonts/Lato/Lato-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: local("Lato-Black");
+  src: url(../assets/fonts/Lato/Lato-Black.ttf);
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: local("Oswald-Regular");
+  src: url(../assets/fonts/Oswald/Oswald-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+.site {
+  background-image: url(../assets/images/header-bg.png);
+}
+
+.container {
+  width: 80%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 128px;
+}
+
+.header-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav {
+  width: 400px;
+}
+
+.nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Lato";
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.nav a:after {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  content: "";
+  -webkit-transition: width 0.3s ease-out;
+  transition: width 0.3s ease-out;
+}
+
+.nav a:hover:after,
+.nav a:focus:after {
+  width: 100%;
+}
+
+.banner {
+  height: 504px;
+}
+
+.sliders img {
+  height: auto;
+  width: 100%;
+}
+/*# sourceMappingURL=main.css.map */
