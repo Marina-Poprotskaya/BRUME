@@ -128,3 +128,58 @@ html {
     height: auto;
     width: 100%;
 }
+
+.contacts-up {
+    height: 90px;
+    background-color: rgb(14, 12, 12);
+}
+
+.contacts-up {
+    display: flex;
+    align-items: center;
+}
+
+.contact-up-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-up-wrapper a {
+color: $secondFontColor;
+font-family: $mainFont;
+font-size: 1.5rem;
+font-weight: 400;
+text-decoration: none;
+}
+
+.contact-right a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $secondFontColor;
+    width: 30px;
+    height: 30px;
+}
+
+.contact-right a:hover {
+    border: 1px solid $mainFontColor;
+    transition: ease-in-out .3s;
+}
+
+.mail {
+    background: url(../assets/images/mail.png) no-repeat left;
+    margin-right: 15px;
+    padding-left: 20px;
+}
+
+.phone {
+    background: url(../assets/images/phone_c.png) no-repeat left;
+    padding-left: 20px;
+}
+
+.contact-right {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
