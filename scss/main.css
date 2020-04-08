@@ -362,7 +362,7 @@ html {
 .contacts-down {
   background-color: black;
   padding-top: 70px;
-  padding-bottom: 70px;
+  padding-bottom: 60px;
 }
 
 .contacts-down__columns {
@@ -443,5 +443,21 @@ html {
 
 .columns .projests-wrapper div {
   margin-bottom: 5px;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #0a0a0a;
+  height: 50px;
+  color: #949494;
+  font-family: "Lato", Sans-serif;
+  font-size: 1.4rem;
+  font-weight: 300;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */
