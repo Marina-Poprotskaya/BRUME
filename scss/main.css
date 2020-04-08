@@ -56,7 +56,7 @@ html {
 }
 
 .site {
-  background-image: url(../assets/images/header-bg.png);
+  margin-top: 128px;
 }
 
 .container {
@@ -68,6 +68,10 @@ html {
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,6 +79,8 @@ html {
       -ms-flex-align: center;
           align-items: center;
   height: 128px;
+  background-image: url(../assets/images/header-bg.png);
+  z-index: 2;
 }
 
 .header-wrapper {
@@ -89,7 +95,7 @@ html {
           justify-content: space-between;
 }
 
-.nav {
+.header .nav {
   width: 400px;
 }
 
@@ -110,7 +116,7 @@ html {
 .nav a {
   text-decoration: none;
   color: #ffffff;
-  font-family: "Lato";
+  font-family: "Lato", Sans-serif;
   font-weight: 700;
   font-size: 1.3rem;
   letter-spacing: 1.2px;
@@ -171,9 +177,9 @@ html {
           justify-content: space-between;
 }
 
-.contact-up-wrapper a {
+.contact-left a {
   color: #949494;
-  font-family: "Lato";
+  font-family: "Lato", Sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
   text-decoration: none;
@@ -189,13 +195,12 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 1px solid #949494;
   width: 30px;
   height: 30px;
 }
 
 .contact-right a:hover {
-  border: 1px solid #ffffff;
+  outline: 1px solid #949494;
   -webkit-transition: ease-in-out .3s;
   transition: ease-in-out .3s;
 }
@@ -225,11 +230,12 @@ html {
   height: auto;
   background-color: #0a0a0a;
   padding-bottom: 70px;
+  border-bottom: 1px solid #949494;
 }
 
 .project h2 {
   position: relative;
-  font-family: "Oswald";
+  font-family: "Oswald", Sans-serif;
   font-size: 3.6rem;
   font-weight: 200;
   text-transform: uppercase;
@@ -309,17 +315,17 @@ html {
 .image.twelveth:hover .hidden.twelveth-hidden {
   opacity: 1;
   z-index: 1;
-  -webkit-transition: ease .3s;
-  transition: ease .3s;
+  -webkit-transition: ease .4s;
+  transition: ease .4s;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #000000;
-  border: 1px solid #646464;
+  outline: 1px solid #646464;
 }
 
 .projests-wrapper span {
-  font-family: "Oswald";
+  font-family: "Oswald", Sans-serif;
   font-size: 2.4rem;
   color: #ffffff;
   text-transform: uppercase;
@@ -337,12 +343,13 @@ html {
   border: 1px solid #949494;
   color: #ffffff;
   color: #ffffff;
-  font-family: "Lato";
+  font-family: "Lato", Sans-serif;
   font-weight: 400;
   line-height: 1em;
   letter-spacing: 1.1px;
   font-size: 1.6rem;
   cursor: pointer;
+  outline: none;
 }
 
 .button:hover {
@@ -350,5 +357,91 @@ html {
   color: #0a0a0a;
   -webkit-transition: ease-in-out .3s;
   transition: ease-in-out .3s;
+}
+
+.contacts-down {
+  background-color: black;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.contacts-down__columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.columns {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+}
+
+.columns h4 {
+  color: #ffffff;
+  font-family: "Oswald", Sans-serif;
+  font-size: 1.7rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.68px;
+  margin-bottom: 20px;
+}
+
+.column-first p {
+  color: #ffffff;
+  font-family: "Lato", Sans-serif;
+  font-size: 1.4rem;
+  font-weight: 300;
+  letter-spacing: 0.1px;
+  margin-top: 20px;
+}
+
+.columns .nav ul {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.columns .nav ul li {
+  margin-top: 20px;
+}
+
+.column-second {
+  margin-left: 100px;
+}
+
+.columns .contact-right a {
+  border: none;
+}
+
+.columns .contact-right {
+  width: 160px;
+  margin-left: -10px;
+}
+
+.columns .contact-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 60px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.columns span {
+  font-size: 1rem;
+}
+
+.columns .projests-wrapper div {
+  margin-bottom: 5px;
 }
 /*# sourceMappingURL=main.css.map */

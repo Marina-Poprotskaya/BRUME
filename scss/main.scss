@@ -49,8 +49,8 @@
 
     $mainFontColor: #ffffff;
     $secondFontColor: #949494;
-    $mainFont: 'Lato';
-    $secondFont: 'Oswald';
+    $mainFont: 'Lato', Sans-serif;
+    $secondFont: 'Oswald', Sans-serif;
     $bgColor: rgb(10, 10, 10);
 
 * {
@@ -63,7 +63,7 @@ html {
 }
 
 .site {
-    background-image: url(../assets/images/header-bg.png);
+   margin-top: 128px;
 }
 
 .container {
@@ -75,10 +75,17 @@ html {
 }
 
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     align-items: center;
     height: 128px;
+    background-image: url(../assets/images/header-bg.png);
+    z-index: 2;
 }
+
 
 .header-wrapper {
   display: flex;
@@ -86,7 +93,7 @@ html {
   justify-content: space-between;
 }
 
-.nav {
+.header .nav {
     width: 400px;
 }
 
@@ -156,7 +163,7 @@ html {
     justify-content: space-between;
 }
 
-.contact-up-wrapper a {
+.contact-left a {
 color: $secondFontColor;
 font-family: $mainFont;
 font-size: 1.5rem;
@@ -168,13 +175,12 @@ text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid $secondFontColor;
     width: 30px;
     height: 30px;
 }
 
 .contact-right a:hover {
-    border: 1px solid $mainFontColor;
+    outline: 1px solid $secondFontColor;
     transition: ease-in-out .3s;
 }
 
@@ -198,6 +204,7 @@ text-decoration: none;
     height: auto;
     background-color: $bgColor;
     padding-bottom: 70px;
+    border-bottom: 1px solid $secondFontColor;
 }
 
 .project h2 {
@@ -273,10 +280,10 @@ text-decoration: none;
  {
     opacity: 1;
     z-index: 1;
-    transition: ease .3s;
+    transition: ease .4s;
     justify-content: center;
     background-color: #000000;
-    border: 1px solid #646464; 
+    outline: 1px solid #646464; 
 
 }
 
@@ -305,6 +312,7 @@ text-decoration: none;
     letter-spacing: 1.1px;
     font-size: 1.6rem;
     cursor: pointer;
+    outline: none;
 }
 
 .button:hover {
@@ -313,4 +321,74 @@ text-decoration: none;
     transition: ease-in-out .3s;
 }
 
+.contacts-down {
+    background-color: black;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
 
+.contacts-down__columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.columns {
+    flex-basis: 25%;
+}
+
+.columns h4 {
+    color: $mainFontColor;
+    font-family: $secondFont;
+    font-size: 1.7rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.68px;
+    margin-bottom: 20px;
+}
+
+.column-first p{
+    color: $mainFontColor;
+    font-family: $mainFont;
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: 0.1px;
+    margin-top: 20px;
+}
+
+.columns .nav ul {
+    flex-direction: column;
+}
+
+.columns .nav ul li {
+    margin-top: 20px;
+}
+
+.column-second {
+    margin-left: 100px;
+}
+
+.columns .contact-right a {
+    border: none;
+}
+
+.columns .contact-right {
+    width: 160px;
+    margin-left: -10px;
+}
+
+.columns .contact-left {
+    display: flex;
+    flex-direction: column;
+    height: 60px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.columns span {
+    font-size: 1rem;
+}
+
+
+.columns .projests-wrapper div {
+    margin-bottom: 5px;
+}
