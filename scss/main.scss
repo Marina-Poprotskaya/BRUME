@@ -38,10 +38,20 @@
     font-style: normal;
     }
 
+@font-face {
+    font-family: 'Oswald';
+    src: local("Oswald-ExtraLight");
+    src: url(../assets/fonts/Oswald/Oswald-ExtraLight.ttf);
+    font-weight: 200;
+    font-style: normal;
+    }
+    
+
     $mainFontColor: #ffffff;
     $secondFontColor: #949494;
     $mainFont: 'Lato';
     $secondFont: 'Oswald';
+    $bgColor: rgb(10, 10, 10);
 
 * {
     margin: 0;
@@ -96,6 +106,7 @@ html {
     font-family: $mainFont;
     font-weight: 700;
     font-size: 1.3rem;
+    letter-spacing: 1.2px;
     text-transform: uppercase;
     height: auto;
     padding-top: 20px;
@@ -120,18 +131,19 @@ html {
 }
 
 .banner {
-    height: 504px;
+    height: auto;
+    background-color: $bgColor;
 }
 
 
 .sliders img {
     height: auto;
-    width: 100%;
+    width: 100vw;
 }
 
 .contacts-up {
     height: 90px;
-    background-color: rgb(14, 12, 12);
+    background-color: $bgColor;
 }
 
 .contacts-up {
@@ -182,4 +194,68 @@ text-decoration: none;
     display: flex;
     justify-content: space-between;
 }
+.project {
+    height: auto;
+    background-color: $bgColor;
+    padding-bottom: 70px;
+}
 
+.project h2 {
+    position: relative;
+    font-family: $secondFont;
+    font-size: 3.6rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    line-height: 1.8em;
+    letter-spacing: 0.72px;
+    color: $mainFontColor;
+    margin-left: 175px;
+}
+
+
+.project h2::before {
+    content: "";
+    border-bottom: 1px solid $mainFontColor;
+    position: absolute;
+    width: 35%;
+    left: -350px;
+    top: 50%;
+}
+
+.projests-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 70px;
+}
+
+.projests-wrapper img {
+    width: 32%;
+    height: auto;
+    padding-bottom: 20px;
+}
+
+.button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 168px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid $secondFontColor;
+    color: $mainFontColor;
+    color: #ffffff;
+    font-family: $mainFont;
+    font-weight: 400;
+    line-height: 1em;
+    letter-spacing: 1.1px;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #ffffff;
+    color: $bgColor;
+    transition: ease-in-out .3s;
+}

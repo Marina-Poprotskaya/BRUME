@@ -38,6 +38,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Oswald';
+  src: local("Oswald-ExtraLight");
+  src: url(../assets/fonts/Oswald/Oswald-ExtraLight.ttf);
+  font-weight: 200;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -105,6 +113,7 @@ html {
   font-family: "Lato";
   font-weight: 700;
   font-size: 1.3rem;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
   height: auto;
   padding-top: 20px;
@@ -130,17 +139,18 @@ html {
 }
 
 .banner {
-  height: 504px;
+  height: auto;
+  background-color: #0a0a0a;
 }
 
 .sliders img {
   height: auto;
-  width: 100%;
+  width: 100vw;
 }
 
 .contacts-up {
   height: 90px;
-  background-color: #0e0c0c;
+  background-color: #0a0a0a;
 }
 
 .contacts-up {
@@ -209,5 +219,76 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.project {
+  height: auto;
+  background-color: #0a0a0a;
+  padding-bottom: 70px;
+}
+
+.project h2 {
+  position: relative;
+  font-family: "Oswald";
+  font-size: 3.6rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  line-height: 1.8em;
+  letter-spacing: 0.72px;
+  color: #ffffff;
+  margin-left: 175px;
+}
+
+.project h2::before {
+  content: "";
+  border-bottom: 1px solid #ffffff;
+  position: absolute;
+  width: 35%;
+  left: -350px;
+  top: 50%;
+}
+
+.projests-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 70px;
+}
+
+.projests-wrapper img {
+  width: 32%;
+  height: auto;
+  padding-bottom: 20px;
+}
+
+.button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 168px;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid #949494;
+  color: #ffffff;
+  color: #ffffff;
+  font-family: "Lato";
+  font-weight: 400;
+  line-height: 1em;
+  letter-spacing: 1.1px;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #ffffff;
+  color: #0a0a0a;
+  -webkit-transition: ease-in-out .3s;
+  transition: ease-in-out .3s;
 }
 /*# sourceMappingURL=main.css.map */
